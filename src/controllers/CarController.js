@@ -76,6 +76,12 @@ class CarController {
     await HmkitServices.unlockDoors(req.session);
     res.redirect('/');
   }
+
+  async getUsage(req, res) {
+    const carUsageData = await HmkitServices.getUsage(req.session);
+    console.log(carUsageData);
+    res.redirect('/');
+  }
 }
 
 module.exports = new CarController();

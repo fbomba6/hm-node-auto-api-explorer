@@ -24,5 +24,7 @@ router.post('/doors/lock', authMiddleware, CarController.lockDoors);
 // Unlock doors action
 router.post('/doors/unlock', authMiddleware, CarController.unlockDoors);
 
+// Get usage
+router.post('/getUsage', authMiddleware, CarController.getUsage);
 
 module.exports = router;

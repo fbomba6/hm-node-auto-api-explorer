@@ -27,6 +27,13 @@ class HmkitServices {
     }));
   }
 
+  getUsage(session) {
+    //return this.telematics.getUsage();
+    return this.sendCommand(session, this.hmkit.commands.Usage.getUsage())
+    //return this.hmkit.commands.Usage.getUsage();
+    //return this.telematics.sendCommand(this.hmkit.commands.Usage.getUsage());
+  }
+
   /*
    * lockDoors()
    *
